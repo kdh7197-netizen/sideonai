@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Sideonai Banner](./docs/banner.png)
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-vercel-black?style=for-the-badge&logo=vercel)](https://verceltest-ecru-six.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06b6d4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=for-the-badge&logo=typescript)](https://typescriptlang.org)
+
+**어떤 도메인이든, 어떤 직무든 — AI를 더하는 순간 완전히 달라집니다.**
+
+</div>
+
+---
+
+## 소개
+
+Sideonai는 AI를 다양한 도메인과 직무에 접목하는 개인 브랜딩 사이트입니다.  
+단순한 포트폴리오를 넘어, AI와 함께하는 관점 자체를 보여주는 공간입니다.
+
+## 주요 기능
+
+### Hero — 뉴럴 파티클 애니메이션
+마우스를 움직이면 반응하는 실시간 뉴럴 네트워크 파티클. Canvas API + `requestAnimationFrame`으로 구현.
+
+### Philosophy — AI × Domain 철학
+"AI는 도구가 아니라 관점입니다." 스크롤 인터섹션 페이드인 애니메이션 카드 4종.
+
+### Works — 프로젝트 쇼케이스
+고객 서비스 / 교육 / 콘텐츠 / HR 등 실제 도메인에 AI를 적용한 프로젝트 카드. 호버 시 글로우 효과.
+
+### 퇴근후 딴짓 — 인터랙티브 게임 2종
+
+![퇴근후 딴짓 섹션](./docs/games.png)
+
+| 게임 | 설명 |
+|------|------|
+| **뉴럴 클리커** | 캔버스를 클릭해 뉴런을 심으면 서로 연결되는 신경망 게임. 100개 달성 시 "AI 탄생!" 이벤트 |
+| **AI 도메인 룰렛** | 버튼 클릭 시 18가지 직업 중 랜덤으로 "AI + 직업" 조합 생성. 슬롯머신 스타일 애니메이션 |
+
+### AI 챗봇 위젯
+우측 하단 플로팅 버튼으로 열리는 SideonAI 챗봇. OpenAI GPT-4o-mini 기반.
+
+---
+
+## 기술 스택
+
+| 분류 | 기술 |
+|------|------|
+| Framework | Next.js 16 (App Router) |
+| Styling | Tailwind CSS v4 |
+| Language | TypeScript 5 |
+| AI | Vercel AI SDK + OpenAI GPT-4o-mini |
+| Font | Space Grotesk (display) + Inter (body) |
+| Deploy | Vercel |
+
+## 로컬 실행
 
 ```bash
+# 패키지 설치
+npm install
+
+# 환경 변수 설정
+cp .env.example .env.local
+# .env.local에 OPENAI_API_KEY 입력
+
+# 개발 서버 시작
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`http://localhost:3000` 에서 확인
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 환경 변수
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# OpenAI API 키 (챗봇 기능에 필요)
+OPENAI_API_KEY=sk-...
 
-## Learn More
+# 사이트 정보
+NEXT_PUBLIC_SITE_URL=https://verceltest-ecru-six.vercel.app
+NEXT_PUBLIC_SITE_NAME=Sideonai
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 배포
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Vercel에 연결된 GitHub 레포를 push하면 자동 배포됩니다.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# 프리뷰 배포
+npx vercel
 
-## Deploy on Vercel
+# 프로덕션 배포
+npx vercel --prod
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<div align="center">
+
+**[🌐 라이브 사이트](https://verceltest-ecru-six.vercel.app)** · Made by Sideonai
+
+</div>
